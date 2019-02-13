@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_friend"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+               >
+
+                <ImageView
+
+                    android:id="@+id/i_image"
+                    android:layout_width="200dp"
+                    android:layout_height="300dp"
+                    android:background="@mipmap/ic_launcher"
+
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                   android:padding="5dp"
+                    android:id="@+id/t_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Title:" />
+
+                <TextView
+                    android:id="@+id/bookrank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Rank:" />
+
+                <TextView
+                    android:id="@+id/t_auther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+
+                    android:text="Auther" />
+
+                <TextView
+                    android:id="@+id/t_publisher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:padding="5dp"
+                    android:text="Publisher" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/t_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description:" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Download Links:" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/amazon_book_download"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/amazon" />
+
+                <TextView
+                    android:id="@+id/t_amazon_isbn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="isbn:" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/barnes_book_download"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/barnesnoblelogo_transparent" />
+
+                <TextView
+                    android:id="@+id/t_barnes_isbn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="isbn:" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/indebound_book_download"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/logo" />
+
+                <TextView
+                    android:id="@+id/t_indebound_isbn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="isbn:" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
