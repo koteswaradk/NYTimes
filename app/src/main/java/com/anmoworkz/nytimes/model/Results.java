@@ -5,9 +5,11 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import javax.inject.Inject;
+
 import dagger.Module;
 
-@Module
+
 public class Results {
 
     @SerializedName("list_name")
@@ -126,6 +128,7 @@ public class Results {
     public void setUpdated(String updated) {
         this.updated = updated;
     }
+
 
     public List<Book> getBooks() {
         return books;

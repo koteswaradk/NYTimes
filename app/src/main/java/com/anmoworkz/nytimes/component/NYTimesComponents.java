@@ -1,4 +1,4 @@
-package com.anmoworkz.nytimes.componenet;
+package com.anmoworkz.nytimes.component;
 
 import com.anmoworkz.nytimes.model.Book;
 import com.anmoworkz.nytimes.model.BuyLink;
@@ -10,8 +10,6 @@ import com.anmoworkz.nytimes.view.MainActivity;
 
 import dagger.Component;
 
-@Component(modules = {HardCover.class,Book.class,BuyLink.class,Isbn.class,Results.class})
 public interface NYTimesComponents {
-    public void inject(MainActivity mainActivity);
-   // HardCoverbooksRepository getBooks();
+    HardCoverbooksRepository getBooks();
 }

@@ -32,7 +32,7 @@ public class HardCoverBookAdapter extends RecyclerView.Adapter<HardCoverBookAdap
     private String TAG=getClass().getSimpleName();
     private Context context;
     LayoutInflater layoutInflater;
-    ArrayList<Book> bookArrayList;
+    List<Book> bookArrayList;
    public HardCoverBookAdapter(Context context, ArrayList<Book> bookArrayList){
        this.context=context;
        this.bookArrayList=bookArrayList;

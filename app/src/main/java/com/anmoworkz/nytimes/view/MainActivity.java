@@ -10,7 +10,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 
-import com.anmoworkz.nytimes.NYTimesApplication;
 import com.anmoworkz.nytimes.R;
 import com.anmoworkz.nytimes.adapter.HardCoverBookAdapter;
 import com.anmoworkz.nytimes.model.Book;
@@ -26,8 +25,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
-    @Inject
-    HardCoverbooksRepository hardCoverbooksRepository;
+
     private String TAG = getClass().getSimpleName();
     @BindView(R.id.recycleview)RecyclerView recyclerView;
     HardCoverBookAdapter adapter;
@@ -42,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
         progressDialog();
-        ((NYTimesApplication)getApplication()).getNYTimesComponents().inject(MainActivity.this);
         bViewModel = ViewModelProviders.of(this).get(HardCoverViewModel.class);
         bViewModel.init();
         bViewModel.getBooks().observe(this, new Observer<HardCover>() {

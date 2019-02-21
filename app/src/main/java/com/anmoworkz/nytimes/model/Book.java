@@ -5,9 +5,11 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import javax.inject.Inject;
+
 import dagger.Module;
 
-@Module
+
 public class Book {
 
     @SerializedName("rank")
@@ -277,7 +279,6 @@ public class Book {
     public void setIsbns(List<Isbn> isbns) {
         this.isbns = isbns;
     }
-
     public List<BuyLink> getBuyLinks() {
         return buyLinks;
     }
