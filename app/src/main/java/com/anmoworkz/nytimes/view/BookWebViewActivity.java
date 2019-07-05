@@ -62,6 +62,7 @@ public class BookWebViewActivity extends AppCompatActivity {
         @Override
         public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
             super.onReceivedError(view, request, error);
+            progressDoalog.cancel();
 
         }
         @TargetApi(Build.VERSION_CODES.N)
@@ -78,7 +79,7 @@ public class BookWebViewActivity extends AppCompatActivity {
         @Override
         public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
             super.onReceivedError(view, errorCode, description, failingUrl);
-
+            progressDoalog.cancel();
 
         }
         @Override

@@ -9,13 +9,10 @@ import com.google.gson.annotations.SerializedName;
 import dagger.Module;
 import dagger.Provides;
 
-
+@Module
 public class HardCover {
 
     Context context;
-   public HardCover(Context context){
-       this.context=context;
-   }
     @SerializedName("status")
     @Expose
     private String status;
@@ -64,7 +61,7 @@ public class HardCover {
         this.lastModified = lastModified;
     }
 
-
+    @Provides
     public Results getResults() {
         return results;
     }

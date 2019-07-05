@@ -27,6 +27,8 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
 
     private String TAG = getClass().getSimpleName();
+    @Inject
+    HardCoverbooksRepository hardCoverbooksRepository;
     @BindView(R.id.recycleview)RecyclerView recyclerView;
     HardCoverBookAdapter adapter;
     ProgressDialog progressDoalog;
@@ -40,8 +42,22 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
         progressDialog();
+
         bViewModel = ViewModelProviders.of(this).get(HardCoverViewModel.class);
-        bViewModel.init();
+
+       /* bViewModel.booksrepository.getBooks().observe(this, new Observer<HardCover>() {
+            @Override
+            public void onChanged(@Nullable HardCover hardCover) {
+                booksList.addAll(hardCover.getResults().getBooks());
+                if (booksList!=null){
+                    generateDataList(booksList);
+                    progressDoalog.cancel();
+                }else{
+                    progressDoalog.cancel();
+                }
+            }
+        });*/
+
         bViewModel.getBooks().observe(this, new Observer<HardCover>() {
             @Override
             public void onChanged(@Nullable HardCover hardCover) {

@@ -8,8 +8,9 @@ import com.google.gson.annotations.SerializedName;
 import javax.inject.Inject;
 
 import dagger.Module;
+import dagger.Provides;
 
-
+@Module
 public class Results {
 
     @SerializedName("list_name")
@@ -129,7 +130,7 @@ public class Results {
         this.updated = updated;
     }
 
-
+    @Provides
     public List<Book> getBooks() {
         return books;
     }

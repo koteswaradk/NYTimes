@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.anmoworkz.nytimes.view.BookWebViewActivity;
 import com.anmoworkz.nytimes.R;
@@ -98,32 +99,42 @@ public class HardCoverBookAdapter extends RecyclerView.Adapter<HardCoverBookAdap
                     context.startActivity(intent);
 
                 }catch (IndexOutOfBoundsException e){
-
+                    Toast.makeText(context,"option not available for the selection",Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
 
-        hardCoverViewHolder.barnes_book_download.setOnClickListener(new View.OnClickListener() {
+           /* hardCoverViewHolder.barnes_book_download.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent(context,BookWebViewActivity.class);
+                    try{
 
-                Intent intent=new Intent(context,BookWebViewActivity.class);
-                intent.putExtra("url",hardCoverViewHolder.barnes_book_download.getContentDescription().toString());
-                context.startActivity(intent);
+                        intent.putExtra("url",hardCoverViewHolder.barnes_book_download.getContentDescription().toString());
+                        context.startActivity(intent);
+                }catch (NullPointerException e){
+                    Toast.makeText(context,"option not available for the selection",Toast.LENGTH_SHORT).show();
+                }
 
-            }
-        });
+
+                }
+            });
+
+
         hardCoverViewHolder.indebound_book_download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try{
                 Intent intent=new Intent(context,BookWebViewActivity.class);
                 intent.putExtra("url",hardCoverViewHolder.indebound_book_download.getContentDescription().toString());
                 context.startActivity(intent);
-
+                }catch (NullPointerException e){
+                    Toast.makeText(context,"option not available for the selection",Toast.LENGTH_SHORT).show();
+                }
             }
-        });
+        });*/
     }
 
     @Override

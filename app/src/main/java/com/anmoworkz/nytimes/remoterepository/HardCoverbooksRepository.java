@@ -7,8 +7,12 @@ import com.anmoworkz.nytimes.network.APIInterface;
 import com.anmoworkz.nytimes.network.RetrofitClientInstance;
 import com.anmoworkz.nytimes.model.Book;
 import com.anmoworkz.nytimes.model.HardCover;
+import com.anmoworkz.nytimes.viewmodel.HardCoverViewModel;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.inject.Inject;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -39,11 +43,7 @@ public class HardCoverbooksRepository {
         });
         return hardcoverbookPojoMutableLiveData;
     }
-    public List<Book> getBooksData(){
-      List<Book> bookList=hardcoverbookPojoMutableLiveData.getValue().getResults().getBooks();
-      return bookList;
 
-    }
 
 
 }
