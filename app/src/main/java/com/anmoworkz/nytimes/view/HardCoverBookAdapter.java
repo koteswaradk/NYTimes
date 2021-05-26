@@ -1,7 +1,6 @@
-package com.anmoworkz.nytimes.adapter;
+package com.anmoworkz.nytimes.view;
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -13,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.anmoworkz.nytimes.view.BookWebViewActivity;
 import com.anmoworkz.nytimes.R;
 import com.anmoworkz.nytimes.model.Book;
 import com.anmoworkz.nytimes.model.BuyLink;

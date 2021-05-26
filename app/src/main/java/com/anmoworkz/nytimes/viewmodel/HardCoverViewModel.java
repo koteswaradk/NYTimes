@@ -6,8 +6,6 @@ import android.arch.lifecycle.ViewModel;
 import com.anmoworkz.nytimes.model.HardCover;
 import com.anmoworkz.nytimes.remoterepository.HardCoverbooksRepository;
 
-import javax.inject.Inject;
-
 
 public class HardCoverViewModel extends ViewModel {
     public MutableLiveData<HardCover> books;
@@ -16,7 +14,7 @@ public class HardCoverViewModel extends ViewModel {
     public HardCoverViewModel(){
         booksrepository=new HardCoverbooksRepository();
         if (this.books!=null){
-            return;
+            return ;
         }
         books=booksrepository.getBooks();
     }

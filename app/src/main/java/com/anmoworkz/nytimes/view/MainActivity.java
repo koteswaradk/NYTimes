@@ -11,7 +11,6 @@ import android.support.v7.widget.RecyclerView;
 
 
 import com.anmoworkz.nytimes.R;
-import com.anmoworkz.nytimes.adapter.HardCoverBookAdapter;
 import com.anmoworkz.nytimes.model.Book;
 import com.anmoworkz.nytimes.model.HardCover;
 import com.anmoworkz.nytimes.remoterepository.HardCoverbooksRepository;
